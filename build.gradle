@@ -1,0 +1,23 @@
+plugins {
+	id 'org.springframework.boot' version '2.0.1.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+
+jar {
+	baseName = 'SpringSecurity'
+	version =  '0.0.1-SNAPSHOT'
+}
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile 'org.springframework.security:spring-security-web'
+	compile 'org.springframework.security:spring-security-config'
+	testCompile("org.springframework.boot:spring-boot-starter-test")
+}
